@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) {... }
+      },
+      margin: {
+        'nav-negative': '-16px',
+      }
+    }
+  }
 }
