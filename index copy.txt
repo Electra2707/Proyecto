@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="min-h-screen flex flex-col">
-      <header class="top-0 w-full">
+      <header class="sticky top-0 w-full">
         <div class="2xl:container 2xl:mx-auto">
           <div class="bg-white rounded shadow-lg py-5 px-7">
             <nav class="flex justify-between">
@@ -197,12 +197,6 @@
           </div>
         </div>
       </header>
-      <div class="container mx-auto p-4">
-        <img
-          src="https://static.wixstatic.com/media/11062b_b599a1bf49ff4559ab5b5d6b5c09920b~mv2.jpeg/v1/fill/w_1034,h_484,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Brainstorm.jpeg%22"
-          class="w-full max-w-md mx-auto max-w-full rounded-lg shadow-lg"
-        />
-      </div>
       <section
         id="features"
         class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20"
@@ -211,18 +205,15 @@
           class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
         >
           <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-            Le ayudamos a desarrollar su potencial
+            Features
           </h2>
 
           <p
             class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
           >
-            Con Ingenio "Consultoria", Agencia consultora en TI con sede en
-            Santiago lleva ideando soluciones para sus clientes desde el año
-            2020. Ofrecemos una amplia cartera de servicios profesionales de
-            consultoría que son totalmente personalizables para su negocio. Sean
-            cuales sean sus necesidades, nosotros podemos ayudarle a cumplirlas.
-            Póngase en contacto con nosotros hoy mismo.
+            The product can personalize user experiences by understanding
+            individual preferences and tailoring recommendations or content
+            based on user behavior and historical data.
           </p>
         </div>
 
@@ -491,11 +482,6 @@
     </div>
   </body>
   <script>
-    // Initialization for ES Users
-    // Initialization for ES Users
-    import { Carousel, initTWE } from "tw-elements";
-
-    initTWE({ Carousel });
     function selected() {
       var targeted = event.target;
       var clicked = targeted.parentElement;
