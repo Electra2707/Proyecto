@@ -199,7 +199,7 @@
       </header>
 
       <main class="flex-grow">
-        <section id="home">
+        < id="home">
           <h2>Bienvenidos a Con Ingenio</h2>
           <p>
             Ofrecemos soluciones innovadoras para impulsar tu negocio en la era
@@ -217,13 +217,7 @@
             Ofrecemos soluciones innovadoras para impulsar tu negocio en la era
             digital.
           </p>
-          <p>
-            Ofrecemos soluciones innovadoras para impulsar tu negocio en la era
-            digital.
-          </p>
           <!-- Más contenido y llamadas a la acción aquí -->
-        </section>
-
         <!-- Sección Nuestros Servicios -->
         <section id="servicios">
           <h2>Nuestros Servicios</h2>
@@ -255,33 +249,19 @@
         <!-- Sección Nosotros -->
         <section id="nosotros">
           <h2>Sobre Nosotros</h2>
+          <br /><br /><br /><br />
           <!-- Misión, visión y valores aquí -->
         </section>
       </main>
       <!-- Footer -->
-
-      <footer class="fixed bottom-0 bg-gray-300 p-4 hidden" id="footer">
+      <footer
+        class="fixed bottom-0 w-full bg-white rounded shadow-lg py-5 px-7 text-right"
+      >
         © 2024 Con Ingenio. Todos los derechos reservados.
       </footer>
     </div>
   </body>
   <script>
-    const footer = document.getElementById("footer");
-
-    // Function to toggle the visibility of the footer
-    function toggleFooterVisibility() {
-      // Check if the user has scrolled to the bottom of the page
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        // Show the footer
-        footer.classList.remove("hidden");
-      } else {
-        // Hide the footer
-        footer.classList.add("hidden");
-      }
-    }
-
-    // Listen for scroll events on the window
-    window.addEventListener("scroll", toggleFooterVisibility);
     function selected() {
       var targeted = event.target;
       var clicked = targeted.parentElement;
