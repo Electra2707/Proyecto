@@ -89,18 +89,16 @@
           <div class="block md:hidden w-full mt-5">
             <div
               onclick="selectNew()"
-              class="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full"
+              class="cursor-pointer px-4 py-3 text-white text-sm bg-indigo-600 rounded flex justify-between items-center w-full"
             >
+              Categorias:
               <div class="flex space-x-2">
-                <span id="s1" class="font-semibold text-sm leading-3 hidden"
-                  >Selected:
+                <span id="s1" class="font-semibold text-sm leading-3 hidden">
                 </span>
                 <p
                   id="textClicked"
-                  class="font-normal text-sm leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer"
-                >
-                  Home
-                </p>
+                  class="font-normal leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer"
+                ></p>
               </div>
               <svg
                 id="ArrowSVG"
@@ -126,19 +124,25 @@
                 class="hidden font-normal text-base leading-4 absolute top-2 w-full rounded shadow-md"
               >
                 <li
-                  onclick="selectedSmall()"
+                  onclick="selectedSmall('home')"
+                  class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                >
+                  Home
+                </li>
+                <li
+                  onclick="selectedSmall('services')"
                   class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                 >
                   Nuestros Servicios
                 </li>
                 <li
-                  onclick="selectedSmall()"
+                  onclick="selectedSmall('contact')"
                   class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                 >
                   Contacto
                 </li>
                 <li
-                  onclick="selectedSmall()"
+                  onclick="selectedSmall('about')"
                   class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
                 >
                   Nosotros
@@ -609,7 +613,10 @@
       document.getElementById("ArrowSVG").classList.toggle("rotate-180");
     }
 
-    function selectedSmall() {
+    function selectedSmall(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
+
       var text = event.target.innerText;
       var newL = document.getElementById("list");
       var newText = document.getElementById("textClicked");
