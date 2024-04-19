@@ -61,25 +61,25 @@
             <!-- For medium and plus sized devices Oa mami-->
             <ul class="hidden md:flex flex-auto space-x-2">
               <li
-                onclick="selected()"
+                onclick="selected('home')"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white bg-indigo-600 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"
               >
                 Home
               </li>
               <li
-                onclick="selected()"
+                onclick="selected('services')"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"
               >
                 Nuestros Servicios
               </li>
               <li
-                onclick="selected()"
+                onclick="selected('contact')"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"
               >
                 Contacto
               </li>
               <li
-                onclick="selected()"
+                onclick="selected('about')"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"
               >
                 Nosotros
@@ -160,8 +160,8 @@
     </section>
 
     <section
-      id="features"
       class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20"
+      id="home"
     >
       <div
         class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
@@ -236,7 +236,7 @@
       </div>
     </section>
 
-    <div class="max-w-4xl mx-auto px-5 mt-16">
+    <div class="max-w-4xl mx-auto px-5 mt-16" id="services">
       <div class="text-center">
         <h2 class="font-semibold text-3xl">Nuestros Servicios</h2>
         <p class="max-w-md mx-auto mt-2 text-gray-500">
@@ -358,7 +358,7 @@
       </div>
     </div>
     <!-- source https://tailblocks.cc/ -->
-    <section class="text-gray-600 body-font relative">
+    <section class="text-gray-600 body-font relative" id="contact">
       <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div
           class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
@@ -457,7 +457,7 @@
       </div>
     </section>
 
-    <section class="bg-gray-100">
+    <section class="bg-gray-100" id="about">
       <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div class="max-w-lg">
@@ -573,16 +573,16 @@
     </footer>
   </body>
   <script>
-    function selected() {
+    function selected(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
+
       var targeted = event.target;
       var clicked = targeted.parentElement;
-
       var child = clicked.children;
-      console.log(child);
 
       for (let i = 0; i < child.length; i++) {
         if (child[i].classList.contains("text-white")) {
-          console.log(child[i]);
           child[i].classList.remove("text-white", "bg-indigo-600");
           child[i].classList.add(
             "text-gray-600",
