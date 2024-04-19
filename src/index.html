@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <!-- Esta etiqueta link define el favicon del sitio web, que es el pequeño icono que aparece en la pestaña del navegador -->
     <link
       rel="icon"
       href="https://media.discordapp.net/attachments/1227369191502254212/1230645238138146856/con-ingenio-solo-colores.png?ex=663412b1&is=66219db1&hm=6eda26a8d4fb7ffdae2e8b2e9e0bb2ca4b0deeae89e07c6369f5119647e7a398&=&format=webp&quality=lossless&width=473&height=473"
     />
+    <!-- El título del sitio web que aparece en la pestaña del navegador -->
     <title>Con Ingenio - Soluciones Innovadoras</title>
+    <!-- Esta etiqueta link conecta una hoja de estilos CSS externa, en este caso, Tailwind CSS, un framework de CSS para diseño rápido y responsivo -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
@@ -15,11 +18,17 @@
   </head>
 
   <body>
+    <!-- El elemento <header> se fija en la parte superior de la página y tiene un ancho completo -->
     <header class="fixed top-0 w-full z-10">
+      <!-- Un contenedor centrado para pantallas grandes (2xl) -->
       <div class="2xl:container 2xl:mx-auto">
+        <!-- Un div con fondo blanco, bordes redondeados y una sombra grande. Tiene un padding vertical (py) de 5 y horizontal (px) de 7 -->
         <div class="bg-white rounded shadow-lg py-5 px-7">
+          <!-- Un elemento de navegación que utiliza flexbox para espaciar los elementos internos justificadamente entre el inicio y el final -->
           <nav class="flex justify-between">
+            <!-- Un div que alinea los elementos internos al centro y establece un espacio horizontal entre ellos. Tiene un padding a la derecha (pr) de 16 para pantallas grandes (lg) y de 6 para tamaños menores -->
             <div class="flex items-center space-x-3 lg:pr-16 pr-6">
+              <!-- El logo que se nos dio en el pdf del trabajo dibujado en graficos vectoriales -->
               <svg
                 class="cursor-pointer"
                 width="34"
@@ -53,13 +62,13 @@
                   fill="#000100"
                 />
               </svg>
+              <!-- Encabezado de la sección de consultoría -->
               <h2 class="font-normal text-2xl leading-6 text-gray-800">
                 Consultoria
               </h2>
             </div>
 
-            <!-- For medium and plus sized devices Oa mami-->
-            <ul class="hidden md:flex flex-auto space-x-2">
+            <ul class="hidden md:flex flex-auto space-x-2 justify-end">
               <li
                 onclick="selected('home')"
                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white bg-indigo-600 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded"
@@ -153,6 +162,7 @@
         </div>
       </div>
     </header>
+    <div id="home"></div>
     <section class="bg-white-100 pt-40"></section>
     <section class="bg-white-100">
       <div class="container mx-auto px-4">
@@ -165,7 +175,6 @@
 
     <section
       class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20"
-      id="home"
     >
       <div
         class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center"
@@ -200,7 +209,6 @@
               </h2>
               <p
                 class="max-w-3xl mt-3 text-lg leading-6 text-indigo-200 text-center sm:text-left"
-                id="newsletter-headline"
               >
                 Para más información, deja tu email.
               </p>
@@ -238,9 +246,10 @@
           </div>
         </div>
       </div>
+      <div id="services"></div>
     </section>
 
-    <div class="max-w-4xl mx-auto px-5 mt-16" id="services">
+    <div class="max-w-4xl mx-auto px-5 mt-24">
       <div class="text-center">
         <h2 class="font-semibold text-3xl">Nuestros Servicios</h2>
         <p class="max-w-md mx-auto mt-2 text-gray-500">
@@ -361,8 +370,9 @@
         </div>
       </div>
     </div>
-    <!-- source https://tailblocks.cc/ -->
-    <section class="text-gray-600 body-font relative" id="contact">
+
+    <div id="contact"></div>
+    <section class="text-gray-600 body-font relative">
       <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
         <div
           class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
@@ -457,11 +467,12 @@
             El suministro de sus datos es voluntario. Si decide enviar sera con
             su consentimiento.
           </p>
+          <div id="about"></div>
         </div>
       </div>
     </section>
 
-    <section class="bg-gray-100" id="about">
+    <section class="bg-gray-100">
       <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div class="max-w-lg">
